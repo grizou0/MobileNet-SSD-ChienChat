@@ -34,6 +34,14 @@ et les répertoires test_lmdb et trainval_lmdb
 On lance ./gen_model
 # 3-Train
 On lance ./train.sh
+Dans le cas ou on aurait une erreur memory out Cuda, cela provient du type de carte.
+On modifie le fichier MobileNetSSD_train.prototxt le nombre batch_size.
+Dans mon cas, je passe à 10.
+  data_param {
+    source: "trainval_lmdb/"
+    batch_size: 8
+    backend: LMDB
+    
 # 4-Essai
 On lance:
 python demo.py
