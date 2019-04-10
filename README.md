@@ -5,18 +5,18 @@ Examples de depp learning MobileNet SSD classe 101 avec 2 classes calculées.
 Les images se trouvent dans le répertoire home/xxx/data/ChientChat.
 # ChienChat
 
-#----------Annotations
-#---------------------chat
-#-------------------------000011.xml......
-#---------------------chien
-#-------------------------000018.xml .....
-#----------JPEGImages
-#---------------------chat
-#--------------------------000011.jpg .....
-#---------------------chien
-#--------------------------000018.jpg
-#-----------test.txt
-#-----------trainval.txt
+----------Annotations
+---------------------chat
+-------------------------000011.xml......
+---------------------chien
+-------------------------000018.xml .....
+----------JPEGImages
+---------------------chat
+--------------------------000011.jpg .....
+---------------------chien
+--------------------------000018.jpg
+-----------test.txt
+-----------trainval.txt
 test.txt et trainval.txt comprennent les noms des xml développés par labelImg.
 chat/000011
 .....
