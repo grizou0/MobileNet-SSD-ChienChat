@@ -1,0 +1,505 @@
+item {
+  name: "none_of_the_above"
+  label: 0
+  display_name: "background"
+}
+item {
+  name: "chat"
+  label: 1
+  display_name: "chat"
+}
+item {
+  name: "chien"
+  label: 2
+  display_name: "chien"
+}
+item {
+  name: "R3"
+  label: 3
+  display_name: "R3"
+}
+item {
+  name: "R4"
+  label: 4
+  display_name: "R4"
+}
+item {
+  name: "R5"
+  label: 5
+  display_name: "R5"
+}
+item {
+  name: "R6"
+  label: 6
+  display_name: "R6"
+}
+item {
+  name: "R7"
+  label: 7
+  display_name: "R7"
+}
+item {
+  name: "R8"
+  label: 8
+  display_name: "R8"
+}
+item {
+  name: "R9"
+  label: 9
+  display_name: "R9"
+}
+item {
+  name: "R10"
+  label: 10
+  display_name: "R10"
+}
+item {
+  name: "R11"
+  label: 11
+  display_name: "R11"
+}
+item {
+  name: "R12"
+  label: 12
+  display_name: "R12"
+}
+item {
+  name: "R13"
+  label: 13
+  display_name: "R13"
+}
+item {
+  name: "R14"
+  label: 14
+  display_name: "R14"
+}
+item {
+  name: "R15"
+  label: 15
+  display_name: "R15"
+}
+item {
+  name: "R16"
+  label: 16
+  display_name: "R16"
+}
+item {
+  name: "R17"
+  label: 17
+  display_name: "R17"
+}
+item {
+  name: "R18"
+  label: 18
+  display_name: "R18"
+}
+item {
+  name: "R19"
+  label: 19
+  display_name: "R19"
+}
+item {
+  name: "R20"
+  label: 20
+  display_name: "R20"
+}
+item {
+  name: "R21"
+  label: 21
+  display_name: "R21"
+}
+item {
+  name: "R22"
+  label: 22
+  display_name: "R22"
+}
+item {
+  name: "R23"
+  label: 23
+  display_name: "R23"
+}
+item {
+  name: "R24"
+  label: 24
+  display_name: "R24"
+}
+item {
+  name: "R25"
+  label: 25
+  display_name: "R25"
+}
+item {
+  name: "R26"
+  label: 26
+  display_name: "R26"
+}
+item {
+  name: "R27"
+  label: 27
+  display_name: "R27"
+}
+item {
+  name: "R28"
+  label: 28
+  display_name: "R28"
+}
+item {
+  name: "R29"
+  label: 29
+  display_name: "R29"
+}
+item {
+  name: "R30"
+  label: 30
+  display_name: "R30"
+}
+item {
+  name: "R31"
+  label: 31
+  display_name: "R31"
+}
+item {
+  name: "R32"
+  label: 32
+  display_name: "R32"
+}
+item {
+  name: "R33"
+  label: 33
+  display_name: "R33"
+}
+item {
+  name: "R34"
+  label: 34
+  display_name: "R34"
+}
+item {
+  name: "R35"
+  label: 35
+  display_name: "R35"
+}
+item {
+  name: "R36"
+  label: 36
+  display_name: "R36"
+}
+item {
+  name: "R37"
+  label: 37
+  display_name: "R37"
+}
+item {
+  name: "R38"
+  label: 38
+  display_name: "R38"
+}
+item {
+  name: "R39"
+  label: 39
+  display_name: "R39"
+}
+item {
+  name: "R40"
+  label: 40
+  display_name: "R40"
+}
+item {
+  name: "R41"
+  label: 41
+  display_name: "R41"
+}
+item {
+  name: "R42"
+  label: 42
+  display_name: "R42"
+}
+item {
+  name: "R43"
+  label: 43
+  display_name: "R43"
+}
+item {
+  name: "R44"
+  label: 44
+  display_name: "R44"
+}
+item {
+  name: "R45"
+  label: 45
+  display_name: "R45"
+}
+item {
+  name: "R46"
+  label: 46
+  display_name: "R46"
+}
+item {
+  name: "R47"
+  label: 47
+  display_name: "R47"
+}
+item {
+  name: "R48"
+  label: 48
+  display_name: "R48"
+}
+item {
+  name: "R49"
+  label: 49
+  display_name: "R49"
+}
+item {
+  name: "R50"
+  label: 50
+  display_name: "R50"
+}
+item {
+  name: "R51"
+  label: 51
+  display_name: "R51"
+}
+item {
+  name: "R52"
+  label: 52
+  display_name: "R52"
+}
+item {
+  name: "R53"
+  label: 53
+  display_name: "R53"
+}
+item {
+  name: "R54"
+  label: 54
+  display_name: "R54"
+}
+item {
+  name: "R55"
+  label: 55
+  display_name: "R55"
+}
+item {
+  name: "R56"
+  label: 56
+  display_name: "R56"
+}
+item {
+  name: "R57"
+  label: 57
+  display_name: "R57"
+}
+item {
+  name: "R58"
+  label: 58
+  display_name: "R58"
+}
+item {
+  name: "R59"
+  label: 59
+  display_name: "R59"
+}
+item {
+  name: "R60"
+  label: 60
+  display_name: "R60"
+}
+item {
+  name: "R61"
+  label: 61
+  display_name: "R61"
+}
+item {
+  name: "R62"
+  label: 62
+  display_name: "R62"
+}
+item {
+  name: "R63"
+  label: 63
+  display_name: "R63"
+}
+item {
+  name: "R64"
+  label: 64
+  display_name: "R64"
+}
+item {
+  name: "R65"
+  label: 65
+  display_name: "R65"
+}
+item {
+  name: "R66"
+  label: 66
+  display_name: "R66"
+}
+item {
+  name: "R67"
+  label: 67
+  display_name: "R67"
+}
+item {
+  name: "R68"
+  label: 68
+  display_name: "R68"
+}
+item {
+  name: "R69"
+  label: 69
+  display_name: "R69"
+}
+item {
+  name: "R70"
+  label: 70
+  display_name: "R70"
+}
+item {
+  name: "R71"
+  label: 71
+  display_name: "R71"
+}
+item {
+  name: "R72"
+  label: 72
+  display_name: "R72"
+}
+item {
+  name: "R73"
+  label: 73
+  display_name: "R73"
+}
+item {
+  name: "R74"
+  label: 74
+  display_name: "R74"
+}
+item {
+  name: "R75"
+  label: 75
+  display_name: "R75"
+}
+item {
+  name: "R76"
+  label: 76
+  display_name: "R76"
+}
+item {
+  name: "R77"
+  label: 77
+  display_name: "R77"
+}
+item {
+  name: "R78"
+  label: 78
+  display_name: "R78"
+}
+item {
+  name: "R79"
+  label: 79
+  display_name: "R79"
+}
+item {
+  name: "R80"
+  label: 80
+  display_name: "R80"
+}
+item {
+  name: "R81"
+  label: 81
+  display_name: "R81"
+}
+item {
+  name: "R82"
+  label: 82
+  display_name: "R82"
+}
+item {
+  name: "R83"
+  label: 83
+  display_name: "R83"
+}
+item {
+  name: "R84"
+  label: 84
+  display_name: "R84"
+}
+item {
+  name: "R85"
+  label: 85
+  display_name: "R85"
+}
+item {
+  name: "R86"
+  label: 86
+  display_name: "R86"
+}
+item {
+  name: "R87"
+  label: 87
+  display_name: "R87"
+}
+item {
+  name: "R88"
+  label: 88
+  display_name: "R88"
+}
+item {
+  name: "R89"
+  label: 89
+  display_name: "R89"
+}
+item {
+  name: "R90"
+  label: 90
+  display_name: "R90"
+}
+item {
+  name: "R91"
+  label: 91
+  display_name: "R91"
+}
+item {
+  name: "R92"
+  label: 92
+  display_name: "R92"
+}
+item {
+  name: "R93"
+  label: 93
+  display_name: "R93"
+}
+item {
+  name: "R94"
+  label: 94
+  display_name: "R94"
+}
+item {
+  name: "R95"
+  label: 95
+  display_name: "R95"
+}
+item {
+  name: "R96"
+  label: 96
+  display_name: "R96"
+}
+item {
+  name: "R97"
+  label: 97
+  display_name: "R97"
+}
+item {
+  name: "R98"
+  label: 98
+  display_name: "R98"
+}
+item {
+  name: "R99"
+  label: 99
+  display_name: "R99"
+}
+item {
+  name: "R100"
+  label: 100
+  display_name: "R100"
+}
