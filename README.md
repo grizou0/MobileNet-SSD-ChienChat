@@ -1,6 +1,7 @@
 # MobileNet-SSD-ChienChat
 Examples deep learning MobileNetSSD classe 101 avec 2 classes classifiée
 ------------------------------------------------------------------------
+
 Les images se trouvent dans le répertoire home/xxx/data/ChientChat.
 ChienChat
 ----------Annotations
@@ -21,19 +22,19 @@ chat/000011
 chien/000018
 ......
 -------------------------------------------------------------------------
-1-Creation List
+# 1-Creation lmdb
 On place les fichiers dans le répertoire ssd-caffe, soit:
 opt/movidius/ssd-caffe/examples/ChienChat.
 On se place dans ce répertoire.
-./create_list.sh     
+./create_lmdb.sh     
 Ce fichier va créer un fichier test.txt, trainval.txt et test_name_size.txt
-2-Creation lmdb
-On lance:
-./create_data.sh
-3-Creation fichier prototxt
+et les répertoires test_lmdb et trainval_lmdb
+
+# 2-Creation fichier prototxt
 On lance ./gen_model
-4-Train
+# 3-Train
 On lance ./train.sh
-5-Essai
+# 4-Essai
 On lance:
-pytohn demo.py
+python demo.py
+
