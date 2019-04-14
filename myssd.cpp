@@ -14,8 +14,6 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
 #include <string>
-#include "pca9685.h"       //Librairie servo I2C
-#include <wiringPi.h>
 
 struct ncDeviceHandle_t *deviceHandle;
 struct ncGraphHandle_t *graphHandle;
@@ -24,18 +22,12 @@ struct ncGraphHandle_t *graphHandle;
 struct ncFifoHandle_t * bufferIn;
 struct ncFifoHandle_t * bufferOut;
 unsigned int graphFileLen;
-
-#define PIN_BASE 300   //parametre servo I2C
-#define MAX_PWM 4096
-#define HERTZ 50       //frequence pwm
-
 #define GRAPH_FILE_NAME "graph" //compile par mvNCCompile deploy.prototxt -w Mobilenet_iter_73000.caffemodel -s 12 -o graph
 
 raspicam::RaspiCam_Cv Camera;
 using namespace std;
 using namespace cv;
-string Id[32]={"rien","chat","chien","johan","trinh","alexandre","jp","inconnu","voiture","R9","R10","R11","R12","R13","R14","R15","R15","R17","R18","R19",
-	      "A","B","C","D","E","F","G","H","I","J","K","L"};
+string Id[3]={"rien","chat","chien"};
 	      
 //----------------------------------------------------------------------
 void *LoadFile(const char *path, unsigned int *length)
@@ -191,56 +183,13 @@ Mat imresize(300,300,CV_8UC3);
 return true;	   
 }
 //----------------------------------------------------------------------
-void MoveServo(int fd,int *PosX,int *PosY,int X1,int Y1,int X2,int Y2,int width,int height)
-{
-//calcul de la position du servo en fonction de la position de l'image
-int StepX,StepY; //Pas a modifier 
-int milieuX=width/2;
-int milieuY=height/2;
-int widthdetect=(X2-X1)/2;  //le point milieu doit etre au milieu de l'image
-int heightdetect=(Y2-Y1)/2;
-int deltaX,deltaY;
-deltaX=milieuX-widthdetect;
-StepX=deltaX/50;
-// Calcul position X
-//printf("X1=%d  X2=%d  widthdetect=%d deltaX=%d Error=%d StepX=%d\n",X1,X2,widthdetect,deltaX,deltaX-X1,StepX);
-if((deltaX > X1+50) && (*PosX<450)) *PosX=*PosX-StepX;
-else if((deltaX < X1-30 )&&(*PosX>50)) *PosX=*PosX+StepX;
-// Calcul position Y
-deltaY=milieuY-heightdetect;
-StepY=deltaY/50;
-//printf("Y1=%d  Y2=%d  heightdetect=%d deltaY=%d StepY=%d\n",Y1,Y2,heightdetect,deltaY,StepY);
-if((deltaY > Y1+30) && (*PosY<400)) *PosY=*PosY+StepY;
-else if((deltaY < Y1)&&(*PosY>30)) *PosY=*PosY-StepY;
-
-    pca9685PWMWrite(fd,0,*PosY,500);//axe Y 0-500
-    pca9685PWMWrite(fd,1,*PosX,500);//axe X 0-500 
-}
-//**********************************************************************
 int main(int argc, char** argv)
 {
 Mat im;
 int width,height; //Size picture display
 bool fin;
 unsigned int imageSize;
-int PosX,PosY;
 int X1,X2,Y1,Y2;
-int Nodetect;
-
-    int fd = pca9685Setup(PIN_BASE, 0x70, HERTZ); //Init I2C servo
-    if (fd < 0)
-	   {
-		printf("Error in setup\n");
-		return fd;
-	   }
-    else printf("Init I2C ok %d\n",fd);
-
-	// Reset all output
-    PosX=250;PosY=50;
-    pca9685PWMReset(fd);
-    pca9685PWMWrite(fd,0,PosY,500);//axe Y
-    pca9685PWMWrite(fd,1,PosX,500);//axe X
-	
     namedWindow("MyWindow",WINDOW_AUTOSIZE);                //Window principale
     Camera.set(CV_CAP_PROP_FORMAT, CV_8UC3);
     Camera.set(CV_CAP_PROP_FRAME_WIDTH,640);
@@ -304,27 +253,13 @@ int Nodetect;
 		    X2=int(fresult[i+5]*width);
 		    Y2=int(fresult[i+6]*height);
 	            printf("0=%f Index=%d Prob=%f X1=%d Y1=%d X2=%d Y2=%d  %s \n",fresult[i],index,fresult[i+2]*100,X1,Y1,X2,Y2,name.c_str());
-		 //   if(index==15) 
-		       {
-		       //imdetect=im;
-		       rectangle(im, Rect (X1,Y1,X2,Y2), Scalar::all(180), 1, 8,0 );
-		       putText(im,name, Point(X1,Y1), FONT_HERSHEY_SCRIPT_SIMPLEX, 1,Scalar::all(180), 3, 2);
-		       Nodetect=0;
-	       	       MoveServo(fd,&PosX,&PosY,X1,Y1,X2,Y2,width,height);
-		       //imshow("Detect",imdetect);
-		       }
+	            rectangle(im, Rect (X1,Y1,X2,Y2), Scalar::all(180), 1, 8,0 );
+		    putText(im,name, Point(X1,Y1), FONT_HERSHEY_SCRIPT_SIMPLEX, 1,Scalar::all(180), 3, 2);
 		  }
                 }
 	free(result);
         imshow("MyWindow",im);		
 
-	Nodetect++;
-	if(Nodetect >50) //si pas d'activité, on revient en position middle
-	   {
-            PosX=250;PosY=50;
-            pca9685PWMWrite(fd,0,PosY,500);//axe Y
-            pca9685PWMWrite(fd,1,PosX,500);//axe X
-	   }
         while (waitKey(1) == (char) 27) fin=true;
         }
    retCode = ncGraphDestroy(&graphHandle);
