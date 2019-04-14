@@ -23,6 +23,24 @@ chat/000011
 .....
 chien/000018
 ......
+Fichier labelmap.prototxt
+```
+item {
+  name: "none_of_the_above"
+  label: 0
+  display_name: "background"
+}
+item {
+  name: "chat"
+  label: 1
+  display_name: "chat"
+}
+item {
+  name: "chien"
+  label: 2
+  display_name: "chien"
+}
+```
 -------------------------------------------------------------------------
 # 1-Creation lmdb
 On place les fichiers dans le répertoire ssd-caffe, soit:
