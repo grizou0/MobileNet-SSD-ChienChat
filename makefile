@@ -1,7 +1,6 @@
 C=`pkg-config --libs opencv`
 D=-I /usr/local/include/raspicam -lraspicam -lraspicam_cv -lopencv_core -lopencv_highgui 
 E=-I /usr/include/opencv2/ -lhighgui -lcore
-F=-I /usr/local/include/ -lwiringPiDev -lwiringPi
 H=-lmvnc
 
 .PHONY: all
@@ -11,7 +10,7 @@ all: ssd
 .PHONY:	run
 ssd: 
 	@echo "\nmaking myssd"
-	g++ myssd.cpp pca9685.c -o myssd $(C) $(D) $(F) $(G) $(H)
+	g++ myssd.cpp  -o myssd $(C) $(D) $(F) $(G) $(H)
 	@echo "Created run executable"
 
 .PHONY: run
