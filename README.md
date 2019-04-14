@@ -47,11 +47,12 @@ Dans le cas ou on aurait une erreur memory out Cuda, cela provient du type de ca
 
 On modifie le fichier MobileNetSSD_train.prototxt le nombre batch_size.
 Dans mon cas, je passe à 10.
+```
   data_param {
     source: "trainval_lmdb/"
     batch_size: 8
     backend: LMDB
-
+```
 Le model commence à être utilisable vers 3000 iteration. (se trouvant dans le répertoire snapshot).
 # 4-Essai
 On lance:
