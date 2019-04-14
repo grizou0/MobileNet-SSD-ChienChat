@@ -78,3 +78,7 @@ On lance:
 ```python demo.py```
 Demo utilise le caffemodel dans snapshot.
 Celui-ci étant calculé par le train.
+
+#5-Raspberry
+myssd et make file sont des fichiers C++ donnant un example de caméra sur rapsberry pi 3b+.
+Les librairies ncsdk (movidius)  et opencv doivent être installée avant.
