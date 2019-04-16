@@ -1,3 +1,9 @@
+// Code source
+// Progamme pour raspberry Pi 3B
+// Détection via camera Pi (raspiCam)
+// Module movidius et fichier personnel "graph" MobileNetSSD.
+// Jean-Pierre Olemans 2019 janvier.
+// ----------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 #include <mvnc.h>
