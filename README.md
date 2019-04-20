@@ -77,7 +77,12 @@ Le model commence à être utilisable vers 3000 iteration. (se trouvant dans le 
 On lance:
 ```python demo.py```
 Demo utilise le caffemodel dans snapshot.
+Les images se trouvent dans image/*.jpg
 Celui-ci étant calculé par le train.
+
+```python test.py ``` est une demo avec la webcam.
+On specifie le prototxt et caffemodel utilisé.
+La base de data doit être définie.
 
 # 5-Raspberry
 myssd et make file sont des fichiers C++ donnant un example de caméra sur raspberry pi 3b+.
